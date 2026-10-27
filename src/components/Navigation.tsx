@@ -44,7 +44,7 @@ export default function Navigation({ onDonateClick, activeSection }: NavigationP
     { id: 'mission', label: t('Missão', 'Mission') },
     { id: 'impact', label: t('Áreas de Impacto', 'Impact Domains') },
     { id: 'history', label: t('Nossa História', 'Our History') },
-    { id: 'breeze-daniele', label: 'Breeze Daniele' },
+    { id: 'breeze-daniele', label: t('Breeze Daniele (Obras & Músicas)', 'Breeze Daniele (Works & Music)') },
     { id: 'calculator', label: t('Calculadora', 'Impact Estimator') },
     { id: 'faq', label: t('Dúvidas & Contato', 'FAQ & Inquire') },
   ];
@@ -72,7 +72,12 @@ export default function Navigation({ onDonateClick, activeSection }: NavigationP
               <span className={`block font-display font-bold text-[11px] sm:text-xs md:text-sm tracking-tight transition-colors leading-tight ${
                 isScrolled ? 'text-[#0f172a]' : 'text-[#0f172a] md:text-white'
               }`}>
-                BREEZE DANIELE YOSHINAGA <span className={isScrolled ? 'text-indigo-600 font-bold' : 'text-indigo-200 md:text-indigo-300 font-bold'}>FOUNDATION</span>
+                BREEZE DANIELE
+              </span>
+              <span className={`block font-display font-bold text-[10px] sm:text-[11px] md:text-xs tracking-tight transition-colors leading-tight ${
+                isScrolled ? 'text-indigo-600' : 'text-indigo-200 md:text-indigo-300'
+              }`}>
+                YOSHINAGA FOUNDATION
               </span>
               <span className={`block text-[8px] sm:text-[9px] font-sans font-medium tracking-wider uppercase leading-tight mt-0.5 ${
                 isScrolled ? 'text-slate-500' : 'text-slate-300 md:text-indigo-200/80'
