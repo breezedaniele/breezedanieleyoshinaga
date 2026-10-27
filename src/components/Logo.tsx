@@ -1,7 +1,9 @@
 import React from 'react';
+import fulllogo from '../assets/images/breeze_daniele_logo_1791322631894.jpg';
+import emblemIcon from '..assets/images/breeze_daniele_emblem_1791322645456.jpg';
 
-const FULL_LOGO_URL = '/src/assets/images/breeze_daniele_logo_1791322631894.jpg';
-const EMBLEM_ICON_URL = '/src/assets/images/breeze_daniele_emblem_1791322645456.jpg';
+const FULL_LOGO_URL = fulllogo
+const EMBLEM_ICON_URL = emblemIcon
 
 interface LogoProps {
   className?: string;
