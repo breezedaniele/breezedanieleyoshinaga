@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  
+  --color-primary-50: #f5f3ff; /* indigo-50 */
+  --color-primary-100: #e0e7ff; /* indigo-100 */
+  --color-primary-600: #4f46e5; /* indigo-600 */
+  --color-primary-700: #4338ca; /* indigo-700 */
+  --color-primary-800: #3730a3; /* indigo-800 */
+  --color-primary-900: #312e81; /* indigo-900 */
+  
+  --color-emerald-950: #0f172a; /* Make deep primary container slate-900/950 for high contrast professionally */
+  --color-gold-50: #fbfbfa;
+  --color-gold-100: #f1f5f9;
+  --color-gold-500: #6366f1; /* Replace with Indigo-500 equivalent */
+  --color-gold-600: #4f46e5; /* Replace with Indigo-600 equivalent */
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-[#fdfcfb] text-slate-900 antialiased selection:bg-indigo-100 selection:text-indigo-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-[#0f172a];
+  }
+}
+
+/* Custom animated lines and glowing cards */
+.gradient-bg {
+  background: radial-gradient(circle at 10% 20%, rgba(243, 244, 246, 0.4) 0%, rgba(253, 252, 251, 1) 90%);
+}
+
+.professional-card {
+  @apply bg-white border border-slate-200/60 rounded-3xl shadow-sm transition-all duration-300;
+}
+
+.professional-card:hover {
+  @apply border-slate-300 shadow-md shadow-slate-200/40;
+}
+
+/* Print Styles for Mock Donation Receipts */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
